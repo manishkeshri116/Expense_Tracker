@@ -31,7 +31,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto flex flex-col justify-center items-center w-96">
       <Header />
       <AddExpenseForm onAddExpense={handleAddExpense} />
       {editingExpense && (

@@ -19,15 +19,15 @@ const CategoryPage = () => {
   }, [category]);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="w-96 ">
       <Header />
-      <div className="mb-4">
+      <div className="mt-6 ">
         <input
           type="text"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           placeholder="Enter category"
-          className="border p-2 rounded"
+          className="border w-96 p-3 text-white  bg-gray-700 rounded-2xl"
         />
       </div>
       <ExpenseList expenses={expenses} onEditExpense={() => {}} />

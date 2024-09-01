@@ -17,29 +17,29 @@ const EditExpenseForm = ({ expense, onUpdateExpense }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 mb-4">
+    <form onSubmit={handleSubmit} className="flex flex-col mt-4 justify-center items-center gap-4 mb-4">
       <input
         type="number"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        className="border p-2 rounded"
+        className="border w-96 p-3 text-white  bg-gray-700 rounded-2xl"
         required
       />
       <input
         type="text"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
-        className="border p-2 rounded"
+        className="border w-96 p-3 text-white  bg-gray-700 rounded-2xl"
         required
       />
       <input
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
-        className="border p-2 rounded"
+        className="border w-96 p-3 text-white  bg-gray-700 rounded-2xl"
         required
       />
-      <button type="submit" className="bg-green-500 text-white p-2 rounded">Update Expense</button>
+      <button type="submit" className="bg-yellow-400  cursor-pointer  text-black font-bold px-4 py-3 rounded-2xl ">Update Expense</button>
     </form>
   );
 };
