@@ -14,16 +14,10 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
-// Middleware Configuration
-app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000', // Allowed origin
-  methods: 'GET,POST,PUT,DELETE', // Allowed methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-  credentials: true, // Allow cookies and credentials
-}));
-
-app.use(express.json()); // Middleware to parse JSON bodies
-app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded bodies
+// Middleware
+app.use(cors());
+app.use(express.json()); // Parse JSON bodies
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 // Routes
 app.use('/api', expenseRoutes); // Use expense routes
